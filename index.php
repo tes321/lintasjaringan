@@ -65,16 +65,61 @@
             </div>
           </div>
           <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
+                    <ul class="sidebar-menu">
             <li class="header">MENU UTAMA</li>
-            <li class="treeview <?php if(!isset($_GET['page'])) { echo "active"; } ?>">
+            <li class="active">
               <a href="index.php">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> 
               </a>
             </li>
-            <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="data_user") { echo "active"; } ?>">
-              <a href="./?page=data_user">
-                <i class="fa fa-user"></i> <span>Data User</span> 
+            <li class="treeview" id="menu-tools">
+          <a href="#"><i class="fa fa-link"></i> <span>master</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: none;">
+            <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="produc") { echo "active"; } ?>">
+              <a href="./?page=produc">
+                <i class="fa fa-link"></i> 
+                <span>Produk Layanan</span>
+              </a>
+            </li>
+           <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="inv") { echo "active"; } ?>">
+              <a href="./?page=inv">
+                <i class="fa fa-link"></i> 
+                <span>Options</span>
+              </a>
+            </li>
+            <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="data_teknisi") { echo "active"; } ?>">
+              <a href="./?page=data_teknisi">
+                <i class="fa fa-link"></i> 
+                <span>Users</span>
+              </a></li>
+            <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="backup") { echo "active"; } ?>">
+              <a href="./?page=backup">
+              <i class="fa fa-link"></i> 
+              <span>Backup</span>
+            </a>
+          </li>
+          </ul>
+        </li>
+     <li class="treeview" id="menu-tools">
+          <a href="#"><i class="fa fa-link"></i> <span>Tool</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li id="menu-product" class="active"><a href=""><i class="fa fa-link"></i> <span>Proses Manual</span></a></li>
+
+          </ul>
+        </li>
+        <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="inv") { echo "active"; } ?>">
+              <a href="./?page=inv">
+                <i class="fa fa-file"></i> <span>INVOICES</span> 
               </a>
             </li>
             <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="data_pembelian") { echo "active"; } ?>">
@@ -82,9 +127,9 @@
                 <i class="fa fa-money"></i> <span>Data Pembelian</span> 
               </a>
             </li>
-            <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="data_teknisi") { echo "active"; } ?>">
-              <a href="./?page=data_teknisi">
-                <i class="fa fa-group"></i> <span>Data Teknisi</span> 
+            <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="data_user") { echo "active"; } ?>">
+              <a href="./?page=data_user">
+                <i class="fa fa-group"></i> <span>CLIENTS</span> 
               </a>
             </li>
             <li class="treeview <?php if(isset($_GET['page']) && $_GET['page']=="spk") { echo "active"; } ?>">
