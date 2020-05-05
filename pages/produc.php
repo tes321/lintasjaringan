@@ -1,9 +1,9 @@
 <?php require_once('config/main.php'); 
-$query=mysql_query("select * from user1");
+$result = $konek->query("select * from user1");
 ?>
 <div class="box">
     <div class="box-header">
-      <h3 class="box-title">Data User ( Terdapat <?php echo mysql_num_rows($query); ?> Data)</h3>
+      <h3 class="box-title">Data User ( Terdapat <?php echo $row = $result->num_rows; ?> Data)</h3>
     </div><!-- /.box-header -->
     <div class="box-body">
     <?php if (isset($_SESSION['username'])): ?>
@@ -17,6 +17,7 @@ $query=mysql_query("select * from user1");
 		    <th>NAMA</th>
 			<th>PRICE</th>
 			<th>CYCLE</th>
+			<th>ACTION</th>
 		    <?php if (isset($_SESSION['username'])): ?>
 		    <th></th>
 			<?php endif; ?>
