@@ -1,10 +1,9 @@
 <?php
-$server = "localhost"; //nama server
-$username = "root"; // username 
-$password = ""; //  standarnya kosong
-$database = "dbcrud"; // buat nama database harus sama 
+$host	= "sql12.freesqldatabase.com";	//alamat server, biasanya 'localhost' atau isi dengan alamat ip server mysql anda
+$user	= "sql12336925";		//defaultnya 'root', sesuaikan dg konfigurasi server anda
+$pass	= "gEVsECXley";		//kosongkan jika tidak ada
+$db		= "sql12336925";	//isi dengan nama database
 
-// Koneksi dan memilih database di server
-mysql_connect($server,$username,$password) or die("Koneksi gagal");
-mysql_select_db($database) or die("Database tidak bisa dibuka");
+$konek = mysqli_connect($host, $user, $pass,$db) or die( "server database tidak ditemukan!");
+
 ?>
